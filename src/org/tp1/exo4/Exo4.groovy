@@ -115,7 +115,7 @@ class Exo4 extends GroovyTestCase {
         // StringWriter but leave out the lines that begin with #.
 
         StringWriter filteredResult = new StringWriter()
-        def prefix = 'src/org/tp1/exo04/'
+        def prefix = 'src/org/tp1/exo4/'
         // ------------ START EDITING HERE ----------------------
 
         // ------------ STOP EDITING HERE  ----------------------
