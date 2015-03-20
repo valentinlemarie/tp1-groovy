@@ -29,7 +29,7 @@ class Exo4 extends GroovyTestCase {
         // What is the result from the above execution?
         def expectedHelloClosureResult
         // ------------ START EDITING HERE ----------------------
-
+        expectedHelloClosureResult='Hello from Closure'
         // ------------ STOP EDITING HERE  ----------------------
         assert helloClosureResult == expectedHelloClosureResult
 
@@ -40,7 +40,7 @@ class Exo4 extends GroovyTestCase {
         // What is the result from the above execution?
         String expectedHelloRonalda
         // ------------ START EDITING HERE ----------------------
-
+        expectedHelloRonalda="Hello Ronalda"
         // ------------ STOP EDITING HERE  ----------------------
         assert helloRonalda == expectedHelloRonalda
 
@@ -53,7 +53,7 @@ class Exo4 extends GroovyTestCase {
         // What is the result from the above execution?
         def expectedHappyBirthdayGranger
         // ------------ START EDITING HERE ----------------------
-
+        expectedHappyBirthdayGranger="Happy Birthday To Hermione"
         // ------------ STOP EDITING HERE  ----------------------
         assert happyBirthdayGranger == expectedHappyBirthdayGranger
 
@@ -61,6 +61,7 @@ class Exo4 extends GroovyTestCase {
         def resultClosure
         // ------------ START EDITING HERE ----------------------
 
+        resultClosure={int a, int b -> (a+b)*2}
         // ------------ STOP EDITING HERE  ----------------------
 
         assert resultClosure(2, 3) == 10
@@ -90,7 +91,7 @@ class Exo4 extends GroovyTestCase {
 
         // Let's check that we got the same result (you can use the assert methods)
         // ------------ START EDITING HERE ----------------------
-
+        assert groovyResult==javaResult;
         // ------------ STOP EDITING HERE  ----------------------
 
         // To make the code even cleaner, Groovy allows some syntactic sugar. If your method has a closure as its
@@ -105,7 +106,7 @@ class Exo4 extends GroovyTestCase {
         // What will monkeyColors contain?
         def expectedMonkeyColors = []
         // ------------ START EDITING HERE ----------------------
-
+        expectedMonkeyColors = ['blue','red','purple']
         // ------------ STOP EDITING HERE  ----------------------
         assert monkeyColors == expectedMonkeyColors
 
@@ -117,6 +118,7 @@ class Exo4 extends GroovyTestCase {
         StringWriter filteredResult = new StringWriter()
         def prefix = 'src/org/tp1/exo4/'
         // ------------ START EDITING HERE ----------------------
+        prefix.eachLine {jline-> if( jline.getAt(0)=='#' ) filteredResult+=jline}
 
         // ------------ STOP EDITING HERE  ----------------------
 

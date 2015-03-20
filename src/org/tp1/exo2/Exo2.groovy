@@ -15,6 +15,8 @@ class Exo2 extends GroovyTestCase {
         def predicate2 = true
 
         // ------------ START EDITING HERE ----------------------
+        predicate1=true
+        predicate2=false
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -28,6 +30,8 @@ class Exo2 extends GroovyTestCase {
         List<String> list = ['item']
 
         // ------------ START EDITING HERE ----------------------
+        map.put("0","lol")
+        list.clear()
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -41,6 +45,8 @@ class Exo2 extends GroovyTestCase {
         String s2 = ''
 
         // ------------ START EDITING HERE ----------------------
+        s1=''
+        s2='coco'
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -57,6 +63,8 @@ class Exo2 extends GroovyTestCase {
 
         // Remove (or change) the offending integer to continue
         // ------------ START EDITING HERE ----------------------
+
+        balance.remove(3)
 
         // ------------ STOP EDITING HERE  ----------------------
 

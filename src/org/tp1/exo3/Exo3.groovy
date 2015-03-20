@@ -24,6 +24,9 @@ class Exo3 extends GroovyTestCase {
         def groovyFirstName
         // ------------ START EDITING HERE ----------------------
 
+        javaFirstName=javaPerson.firstName
+        groovyFirstName=groovyPerson.firstName
+
         // ------------ STOP EDITING HERE  ----------------------
 
         assert javaFirstName == 'Argus'
@@ -40,6 +43,7 @@ class Exo3 extends GroovyTestCase {
         shouldFail (ReadOnlyPropertyException) {
             // ------------ START EDITING HERE ----------------------
 
+            person.ssn="3333"
             // ------------ STOP EDITING HERE  ----------------------
             failed = false
         }
@@ -61,6 +65,7 @@ class Exo3 extends GroovyTestCase {
         // Create a SimpleGroovyBean using named arguments, to represent a transaction with -30 as its data.
         def transaction
         // ------------ START EDITING HERE ----------------------
+        transaction= new SimpleGroovyBean(data : -30)
 
         // ------------ STOP EDITING HERE  ----------------------
 
