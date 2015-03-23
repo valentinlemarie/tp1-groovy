@@ -117,8 +117,11 @@ class Exo4 extends GroovyTestCase {
 
         StringWriter filteredResult = new StringWriter()
         def prefix = 'src/org/tp1/exo4/'
+
         // ------------ START EDITING HERE ----------------------
-        prefix.eachLine {jline-> if( jline.getAt(0)=='#' ) filteredResult+=jline}
+        File f = new File("$prefix/exercise.txt")
+        f.readLines().grep({ it -> if(it.startsWith('#') ){ }else{filteredResult.append(it+'\n') }  })
+
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -137,7 +140,7 @@ class Exo4 extends GroovyTestCase {
         // http://groovy.codehaus.org/groovy-jdk/java/lang/String.html
         def expectedCount
         // ------------ START EDITING HERE ----------------------
-
+        expectedCount= 3
         // ------------ STOP EDITING HERE  ----------------------
 
         assert count == expectedCount
@@ -151,7 +154,7 @@ class Exo4 extends GroovyTestCase {
         // What will the value of mysteryList be?
         def expectedMysteryList
         // ------------ START EDITING HERE ----------------------
-
+        expectedMysteryList=['Baby','Yeah']
         // ------------ STOP EDITING HERE  ----------------------
         assert mysteryList == expectedMysteryList
 

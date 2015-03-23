@@ -34,6 +34,8 @@ class Exo5 extends GroovyTestCase {
         def idListResult = []
         // ------------ START EDITING HERE ----------------------
 
+        idToNameMap.each { key, value -> idListResult.add("$key$value") };
+
         // ------------ STOP EDITING HERE  ----------------------
         assert idListResult == ['333Matthew', '233Christopher', '133Dominic']
     }
@@ -48,7 +50,12 @@ class Exo5 extends GroovyTestCase {
         // What will range equal?
         def expectedRange = []
         // ------------ START EDITING HERE ----------------------
-
+        expectedRange.add(5);
+        expectedRange.add(6);
+        expectedRange.add(7);
+        expectedRange.add(8);
+        expectedRange.add(9);
+        expectedRange.add(10);
         // ------------ STOP EDITING HERE  ----------------------
         assert range == expectedRange
     }
@@ -60,9 +67,15 @@ class Exo5 extends GroovyTestCase {
         // http://groovy.codehaus.org/groovy-jdk/java/lang/Object.html#eachWithIndex(groovy.lang.Closure)
         def rangeResult = []
         // ------------ START EDITING HERE ----------------------
+        def range = 'a'..'z';
+        range.eachWithIndex { value, index ->
+            if (index % 2 == 0)
+                rangeResult << value
+        }
 
         // ------------ STOP EDITING HERE  ----------------------
         assert rangeResult == ['a', 'c', 'e', 'g', 'i', 'k', 'm', 'o', 'q', 's', 'u', 'w', 'y']
+
     }
 
 
